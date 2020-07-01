@@ -9,4 +9,4 @@
 ## Project structure
 - model: model checkpoint
 - scripts: code
-- targetlist_updated_clean: logo database which contains 2000+ logos belong to 180 brands
+- targetlist_updated_clean: download link: https://drive.google.com/file/d/110dbTlch34Zo-_KntqqcF4DYzsq5eoxf/view?usp=sharing. logo database which contains 2000+ logos belong to 180 brands
