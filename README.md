@@ -1,9 +1,10 @@
 # My_Siamese
 
 ## Instructions
-- Step 1: Install requirements by 
+- Step 1: Clone this repository by ```git clone https://github.com/lindsey98/My_Siamese.git```
+- Step 2: Install requirements by 
 ```pip install -r requirements.txt```
-- Step 2: Use scripts/predict.py to make prediction for a single logo, the output from predict.py will be a feature vector of length 2048
+- Step 3: Run scripts/predict.py to make prediction for a single logo, the output from predict.py will be a feature vector of length 2048
 
 ## Project structure
 - model: model checkpoint
