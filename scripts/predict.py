@@ -61,12 +61,12 @@ def load_model(classes, weights_path):
 if __name__ == '__main__':
     ## do not change these configurations
     classes = 180
-    modelpath = 'model/rgb_ar.pth'
+    modelpath = './model/rgb_ar.pth'
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = load_model(classes, modelpath)
     model.to(device)
     model.eval()
 
     ## change img_path to the logo you want to test
-    img_path = 'targetlist_updated_clean/1&1 Ionos/1.png'
+    img_path = './targetlist_updated_clean/1&1 Ionos/1.png'
     logo_feat = pred(img_path, model)
