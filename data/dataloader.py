@@ -82,9 +82,9 @@ if __name__ == '__main__':
     model.eval()
 
     '''get all prediction'''
-    pred_prob = torch.tensor([], device='cuda:0')
-    targets = torch.tensor([], device='cuda:0')
-    pred_feat = torch.tensor([], device='cuda:0')
+    pred_prob = torch.tensor([], device=device)
+    targets = torch.tensor([], device=device)
+    pred_feat = torch.tensor([], device=device)
 
     with torch.no_grad():
         for i, (inputs, labels) in enumerate(testloader):
