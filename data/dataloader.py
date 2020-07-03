@@ -84,14 +84,17 @@ if __name__ == '__main__':
     '''get all prediction'''
     pred_prob = torch.tensor([], device='cuda:0')
     targets = torch.tensor([], device='cuda:0')
+    pred_feat = torch.tensor([], device='cuda:0')
 
     with torch.no_grad():
         for i, (inputs, labels) in enumerate(testloader):
             inputs, labels = inputs.to(device, dtype=torch.float), labels.to(device, dtype=torch.float)
+            pred_feat = torch.cat((pred_feat, model.features(inputs)), 0)
             pred_prob = torch.cat((pred_prob, model(inputs)), 0)
             targets = torch.cat((targets, labels), 0)
 
     _, pred_cls = torch.max(pred_prob, 1)
 
+    print(pred_feat.shape)
     print(pred_prob.shape)
     print(pred_cls.shape)
